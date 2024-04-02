@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<form action="/blog/<%= blog.ID %>" method="post" class="create-form">
+    <input type="hidden" name="method" value="put">
+    <input type="text" id="title" name="title" placeholder="Title" class="title" value="<%=blog.title%>"/>
+    <textarea name="text" id="text" cols="30" rows="17" placeholder="Write your article here..." class="text"><%= blog.text %></textarea>
+    
+    <div class="btn-container">
+      <button type="submit" class="submit-btn">UPDATE</button>
+    </div>
+</form>
+
+<%- include('partials/footer') %>

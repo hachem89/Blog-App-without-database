@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<div class="blogs-container">
+  <div class="blog" id="opened-blog">
+    <a href="/update/<%= blog.ID %>" class="update-btn"
+      ><i class="fa-solid fa-pencil"></i
+    ></a>
+
+    <h1 class="blog-title"><%= blog.title %></h1>
+    <p class="blog-text"><%= blog.text %></p>
+    <div class="blog-info">
+      <span class="date"><%= blog.date %></span>
+      <div class="blog-info-right">
+        <button class="bookmark-btn">
+          <i class="fa-sharp fa-regular fa-bookmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="blog-footer">
+    <a href="/" class="back-btn"
+      ><i class="fa-solid fa-arrow-left" style="margin-right: 2px"></i>Back</a
+    >
+    <a href="/delete/<%= blog.ID %>" class="delete-btn"
+      ><i class="fa-regular fa-trash-can"></i
+    ></a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

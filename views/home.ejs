@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="blogs-container">
+  <% blogs.forEach(blog =>{ %>
+  <div class="blog">
+    <a href="/blog/<%=blog.ID%>" class="blog-title"><%= blog.title %></a>
+    <p class="blog-text"><%= blog.text %></p>
+    <div class="blog-info">
+      <span class="date"><%= blog.date %></span>
+      <div class="blog-info-right">
+        <span class="reading-time"><%= blog.readTime %> read</span>
+        <button class="bookmark-btn">
+          <i class="fa-sharp fa-regular fa-bookmark"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%-include('partials/footer') %>
